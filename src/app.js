@@ -14,14 +14,14 @@ app.use(bodyParser.json());
 // Environment vars
 config({ path: "../.env" });
 
-const PORT = process.env.PORT || 5500
+const PORT = process.env.PORT || 8000
 
 // Routes
-import authRoutes from "./routes/v1/session.route.js";
+import notificationRoutes from "./routes/v1/notifcations.route.js";
 // Paths
-app.use(`/api/v1/session`, authRoutes);
-// app.use(`/api/v1/logs`, logRoutes);
+app.use(`/api/v1/notification`, notificationRoutes);
 
 app.listen(PORT, async () => {
+  console.log(`Server running on PORT: ${PORT}`)
   startup.initialise();
 });
