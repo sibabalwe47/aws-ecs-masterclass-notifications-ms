@@ -17,7 +17,7 @@ const sendNotification = async (req, res) => {
     });
 
     res.status(200).json({
-      message: `Notification to ${toEmailAddresses[0]} sent out successfully!`,
+      message: `Notification to ${toEmailAddresses} sent out successfully!`,
     });
 
   } catch (error) {
